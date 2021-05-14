@@ -66,3 +66,13 @@ function printOutput(name1, name2, isSub, isSame) {
 // A = [1, 2, 3], B = [1, 2, 3],A is same as B 
 // A = [1, 2, 3, 4, 5], B = [2, 3, 4], B is a subset of A
 // A = [1, 2, 6], B = [1, 2, 3, 4, 5],A and B are not equal.
+
+function checkIfDivisible() {
+    let numb = document.getElementById('num3').value.split(',').map(x => parseInt(x));
+    numb.forEach(x=>(number)=>{
+        if (number % 3 == 0) alert(number +' Number is divisible by 3');
+        else if (number % 5 == 0) alert(number +' Number is divisible by 5');
+        else if (number % 15 == 0) alert(number+' Number is divisible by 15'); 
+        else (alert(number+' Number is NOT divisible by 3,5 or 15'));
+    });
+}
