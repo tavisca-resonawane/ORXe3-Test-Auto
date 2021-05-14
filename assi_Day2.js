@@ -69,10 +69,13 @@ function printOutput(name1, name2, isSub, isSame) {
 
 function checkIfDivisible() {
     let numb = document.getElementById('num3').value.split(',').map(x => parseInt(x));
-    numb.forEach(x=>(number)=>{
+   
+    numb.forEach((number)=>{
         if (number % 3 == 0) alert(number +' Number is divisible by 3');
         else if (number % 5 == 0) alert(number +' Number is divisible by 5');
         else if (number % 15 == 0) alert(number+' Number is divisible by 15'); 
         else (alert(number+' Number is NOT divisible by 3,5 or 15'));
     });
+
+    
 }
