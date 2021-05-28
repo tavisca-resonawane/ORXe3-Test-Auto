@@ -1,0 +1,24 @@
+{
+  "name": "assi_3.7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^7.6.1",
+    "webdriverio": "^7.6.1"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.6.1",
+    "@wdio/mocha-framework": "^7.6.0",
+    "@wdio/spec-reporter": "^7.6.1",
+    "chromedriver": "^90.0.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "wdio-chromedriver-service": "^7.1.0"
+  }
+}
