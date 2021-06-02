@@ -39,6 +39,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var HotelResults = /** @class */ (function () {
     function HotelResults() {
     }
+    Object.defineProperty(HotelResults.prototype, "wayfinderinfoLocation", {
+        get: function () { return $('.wayfinder-info'); },
+        enumerable: false,
+        configurable: true
+    });
     Object.defineProperty(HotelResults.prototype, "hotelNameFilter", {
         get: function () { return $('#HotelNameFilter'); },
         enumerable: false,
@@ -66,6 +71,11 @@ var HotelResults = /** @class */ (function () {
     });
     Object.defineProperty(HotelResults.prototype, "countheader", {
         get: function () { return $('h2.hotel-results-pagination-count-header'); },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(HotelResults.prototype, "lstpagination", {
+        get: function () { return $$('.pagination-lg li'); },
         enumerable: false,
         configurable: true
     });
@@ -131,6 +141,50 @@ var HotelResults = /** @class */ (function () {
             });
         });
     };
+    HotelResults.prototype.applyPagination = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var arrPgs, pgCount, _loop_1, i;
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.lstpagination];
+                    case 1:
+                        arrPgs = (_a.sent());
+                        return [4 /*yield*/, arrPgs.length];
+                    case 2:
+                        pgCount = _a.sent();
+                        _loop_1 = function (i) {
+                            return __generator(this, function (_b) {
+                                switch (_b.label) {
+                                    case 0: return [4 /*yield*/, arrPgs[i].click()];
+                                    case 1:
+                                        _b.sent();
+                                        return [4 /*yield*/, browser.waitUntil(function () {
+                                                return _this.countheader.getText().includes('' + i * 25);
+                                            }, { timeout: 1000 })];
+                                    case 2:
+                                        _b.sent();
+                                        return [2 /*return*/];
+                                }
+                            });
+                        };
+                        i = 1;
+                        _a.label = 3;
+                    case 3:
+                        if (!(i < pgCount - 1)) return [3 /*break*/, 6];
+                        return [5 /*yield**/, _loop_1(i)];
+                    case 4:
+                        _a.sent();
+                        _a.label = 5;
+                    case 5:
+                        i++;
+                        return [3 /*break*/, 3];
+                    case 6: return [2 /*return*/];
+                }
+            });
+        });
+    };
     return HotelResults;
 }());
 exports.default = new HotelResults();
+//# sourceMappingURL=hotelResults.page.js.map

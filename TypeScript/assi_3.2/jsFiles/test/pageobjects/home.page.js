@@ -140,7 +140,7 @@ var HomePage = /** @class */ (function () {
                     case 12:
                         //await browser.pause(2000);
                         _c.sent();
-                        return [4 /*yield*/, browser.pause(2000)];
+                        return [4 /*yield*/, browser.pause(1000)];
                     case 13:
                         _c.sent();
                         return [4 /*yield*/, this.checkDate(startDate)];
@@ -151,7 +151,7 @@ var HomePage = /** @class */ (function () {
                     case 16: return [4 /*yield*/, (_c.sent()).click()];
                     case 17:
                         _c.sent();
-                        return [4 /*yield*/, browser.pause(3000)];
+                        return [4 /*yield*/, browser.pause(1000)];
                     case 18:
                         _c.sent();
                         return [4 /*yield*/, this.checkOut(endDate)];
@@ -161,15 +161,12 @@ var HomePage = /** @class */ (function () {
                     case 20:
                         // await (await this.inputCheckOutDate).click() 
                         _c.sent();
-                        return [4 /*yield*/, browser.pause(2000)];
+                        return [4 /*yield*/, browser.pause(1000)];
                     case 21:
                         _c.sent();
                         return [4 /*yield*/, this.btnSearch];
                     case 22: return [4 /*yield*/, (_c.sent()).click()];
                     case 23:
-                        _c.sent();
-                        return [4 /*yield*/, browser.pause(5000)];
-                    case 24:
                         _c.sent();
                         return [2 /*return*/];
                 }
@@ -179,3 +176,4 @@ var HomePage = /** @class */ (function () {
     return HomePage;
 }());
 exports.default = new HomePage();
+//# sourceMappingURL=home.page.js.map

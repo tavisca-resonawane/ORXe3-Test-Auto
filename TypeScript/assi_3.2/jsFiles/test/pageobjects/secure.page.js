@@ -38,3 +38,4 @@ var SecurePage = /** @class */ (function (_super) {
     return SecurePage;
 }(page_1.default));
 exports.default = new SecurePage();
+//# sourceMappingURL=secure.page.js.map

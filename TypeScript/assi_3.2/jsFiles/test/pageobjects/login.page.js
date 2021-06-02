@@ -137,7 +137,7 @@ var MainPage = /** @class */ (function (_super) {
                         title = _a.sent();
                         console.log('Title is ' + title);
                         expect(title).toBe(tit);
-                        console.log('Title verified successfully as ' + title);
+                        console.log('Title verified successfully as==========' + title);
                         return [2 /*return*/];
                 }
             });
@@ -145,7 +145,10 @@ var MainPage = /** @class */ (function (_super) {
     };
     MainPage.prototype.getAllOfferedLinks = function () {
         var arr = this.linksOffered;
-        arr.forEach(function (x) { console.log(x.getText()); });
+        for (var index = 0; index < arr.length; index++) {
+            var element = arr[index];
+            console.log(element.getText() + "==================");
+        }
     };
     MainPage.prototype.enterSearch = function (vac) {
         return __awaiter(this, void 0, void 0, function () {
@@ -170,3 +173,4 @@ var MainPage = /** @class */ (function (_super) {
     return MainPage;
 }(page_1.default));
 exports.default = new MainPage();
+//# sourceMappingURL=login.page.js.map
